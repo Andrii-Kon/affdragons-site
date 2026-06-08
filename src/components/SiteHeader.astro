@@ -1,0 +1,77 @@
+---
+// Site header / primary nav. Reproduced from the original site chrome.
+// Internal links are made root-relative so they resolve on the new static host;
+// the Login / "For Publishers" links intentionally keep pointing at the existing
+// my.affdragons.com app (the real auth backend) for switch-over.
+const { lang = "en" } = Astro.props;
+const base = lang === "en" ? "" : `/${lang}`;
+---
+<header id="masthead" class="site-header">
+  <div class="affd-header" id="affd-header">
+    <div class="affd-header__inner">
+      <div class="affd-header__logo">
+        <a class="affd-header__logo-link" href={`${base}/`}>
+          <img
+            class="affd-header__logo-img"
+            src="/wp-content/uploads/2020/10/logotype.png"
+            alt="Affiliate Dragons"
+            width="200"
+            height="45"
+            loading="eager"
+            decoding="async"
+          />
+        </a>
+      </div>
+
+      <button
+        type="button"
+        class="affd-header__toggle"
+        aria-expanded="false"
+        aria-controls="affd-header-panel"
+        aria-label="Menu"
+      >
+        <span class="affd-header__toggle-bar"></span>
+        <span class="affd-header__toggle-bar"></span>
+        <span class="affd-header__toggle-bar"></span>
+      </button>
+
+      <div class="affd-header__panel" id="affd-header-panel">
+        <nav class="affd-header__nav">
+          <ul class="affd-header__menu">
+            <li class="menu-item current-menu-item"><a href={`${base}/#Why-Us`}>Why Us</a></li>
+            <li class="menu-item menu-item-has-children">
+              <a href={`${base}/partnership/`}>Cooperation</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="https://my.affdragons.com/user/index?set-language=en#signup">For Publishers</a></li>
+                <li class="menu-item"><a href={`${base}/advertisers/`}>For Advertisers</a></li>
+                <li class="menu-item"><a href={`${base}/partnership/`}>Partnership</a></li>
+                <li class="menu-item"><a href={`${base}/our-partners/`}>Our partners</a></li>
+                <li class="menu-item"><a href={`${base}/careers/`}>Careers</a></li>
+                <li class="menu-item"><a href={`${base}/events/`}>Events</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href={`${base}/inhouse-offers/`}>InHouse offers</a></li>
+            <li class="menu-item"><a href={`${base}/blog/`}>Blog</a></li>
+            <li class="menu-item"><a href={`${base}/contact/`}>Contact</a></li>
+          </ul>
+        </nav>
+        <div class="affd-header__actions">
+          <div class="affd-header__buttons">
+            <a class="affd-header__btn affd-header__btn--signup" href={`${base}/sign-up/`}>Sign Up</a>
+            <a
+              class="affd-header__btn affd-header__btn--login"
+              href="https://my.affdragons.com/user/index"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="affd-header__login-icon" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M17 8h-1V6a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2zm-3 0H10V6a2 2 0 1 1 4 0v2z"></path>
+              </svg>
+              <span>Login</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

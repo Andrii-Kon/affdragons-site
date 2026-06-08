@@ -1,0 +1,69 @@
+---
+// Shared layout for every page. Holds the <head> (fonts + the captured CSS
+// bundle that preserves the original look), and slots page-specific content.
+// This replaces the per-page Elementor/WordPress scaffolding with one shell.
+export interface Props {
+  title: string;
+  description?: string;
+  cssBundle: string; // path under /wp-content/cache/min/... captured for this page
+  inlineCss?: string; // optional per-page Elementor CSS (heading colours, spacing, etc.)
+  lang?: "en" | "ru" | "uk";
+  canonical?: string;
+  ogImage?: string;
+}
+const {
+  title,
+  description = "",
+  cssBundle,
+  inlineCss,
+  lang = "en",
+  canonical,
+  ogImage,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {canonical && <link rel="canonical" href={canonical} />}
+
+    <!-- Open Graph / Twitter, preserved so search/social rankings hold after switch -->
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:type" content="website" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts used by the original design -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900|Roboto:300,400,500,900|Roboto+Slab:400,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- The captured, merged CSS bundle reproduces the original styling 1:1 -->
+    <link rel="stylesheet" href={cssBundle} />
+
+    <!-- Per-page Elementor CSS (heading colours, hero spacing, buttons) -->
+    {inlineCss && <link rel="stylesheet" href={inlineCss} />}
+
+    <!-- Custom carousels replacing the original slick.js sliders -->
+    <link rel="stylesheet" href="/assets/sliders.css" />
+
+    <link rel="icon" href="/wp-content/uploads/2020/11/cropped-favicon-270x270.png" />
+  </head>
+  <body>
+    <slot name="header" />
+    <main>
+      <slot />
+    </main>
+    <slot name="footer" />
+    <script src="/assets/sliders.js" is:inline></script>
+    <script src="/assets/animations.js" is:inline></script>
+  </body>
+</html>

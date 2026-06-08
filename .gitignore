@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Astro build output + cache
+dist/
+.astro/
+
+# Raw crawl capture (large; intermediate source material, not part of the site)
+site/
+
+# Mirrored upload images are large (~436MB) and mostly for pages not built yet.
+# Only the assets the built pages actually use are force-added (see git add -f).
+public/wp-content/uploads/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log

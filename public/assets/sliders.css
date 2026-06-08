@@ -1,0 +1,61 @@
+/* Minimal styling for the custom carousels that replace the original slick.js.
+   Kept neutral so it sits on top of the captured Elementor/JetElements CSS. */
+.ad-slider__viewport {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.ad-slider__track {
+  width: 100%;
+}
+.ad-slider__slides {
+  display: flex;
+  will-change: transform;
+}
+.ad-slider__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(41, 27, 122, 0.85);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.ad-slider__arrow:hover {
+  background: #e6007e;
+}
+.ad-slider__arrow--prev {
+  left: 6px;
+}
+.ad-slider__arrow--next {
+  right: 6px;
+}
+.ad-slider__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+.ad-slider__dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #c9c3e6;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.ad-slider__dot.is-active {
+  background: #e6007e;
+}
