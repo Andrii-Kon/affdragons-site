@@ -38,9 +38,12 @@ for (const file of walk(DIST)) {
       const fixed = val.replace(/(^|,\s*)\/(?!\/)/g, `$1${prefix}/`);
       return `${attr}="${fixed}"`;
     });
+    // inline style background-image url(...) — handles plain, "quoted" and
+    // &quot;-escaped forms (e.g. footer Vector.png). Skip // and already-based.
+    s = s.replace(/url\((\s*(?:&quot;|["']))?\/(?!\/)/g, (m, q) => `url(${q || ""}${prefix}/`);
   } else {
     // CSS url(/...) references
-    s = s.replace(/url\(\s*\/(?!\/)/g, `url(${prefix}/`);
+    s = s.replace(/url\(\s*(["']?)\/(?!\/)/g, (m, q) => `url(${q}${prefix}/`);
   }
 
   // Avoid double-prefixing if a path already contains the base.
