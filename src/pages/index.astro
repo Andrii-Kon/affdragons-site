@@ -2,13 +2,11 @@
 // Homepage — rebuilt off WordPress/Elementor. The section markup is the firm's
 // own captured content; it is injected as raw HTML and styled by the captured
 // CSS bundle so the look matches the original 1:1.
-import { readFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
 import Base from "../layouts/Base.astro";
 import SiteHeader from "../components/SiteHeader.astro";
-
-const mainHtml = readFileSync(fileURLToPath(new URL("../home-main.html", import.meta.url)), "utf8");
-const footerHtml = readFileSync(fileURLToPath(new URL("../footer.html", import.meta.url)), "utf8");
+// Import the captured markup as raw strings (bundled at build time by Vite).
+import mainHtml from "../home-main.html?raw";
+import footerHtml from "../footer.html?raw";
 
 const cssBundle = "/wp-content/cache/min/1/15b1474ef970b378f3d5f78749ff522e.css";
 const description =

@@ -1,7 +1,7 @@
 # Dependencies
 node_modules/
 
-# Astro build output + cache
+# Astro build output + cache (built by CI, never committed)
 dist/
 .astro/
 
