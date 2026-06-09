@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/sign-up.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/6d10a5237bf858b0d4129c4c7daac3ee.css";
+---
+<Base title={"Sign Up - Affiliate Dragons"} description={"Publisher Sign up To access offers Advertiser Sign up To receive traffic"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/sign-up/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

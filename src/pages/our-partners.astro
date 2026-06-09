@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/our-partners.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/3046daafa30426b6d38b5261b4dca0a6.css";
+---
+<Base title={"Our Partners - Affiliate Dragons"} description={"Our Partners NodeMaven is a leading proxy provider specialising in high-quality residential and mobile IP addresses. The service is designed for digital professionals who value anonymity, stability, a"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/our-partners/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/partnership.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7ed125548990fb0bfa0e9180d622ab69.css";
+---
+<Base title={"Partnership - Affiliate Dragons"} description={"COLLABORATION & PARTNERSHIP Affiliate Dragons is always ready to hit new heights and open for cooperation, various ideas, and work on win-win terms. JOIN US CPA NETWORKS WITH RELATED VERTICALS Options"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/partnership/">
+  <SiteHeader slot="header" lang="en" active="cooperation" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

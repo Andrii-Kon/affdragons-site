@@ -236,3 +236,78 @@ footer .elementor-icon-list-item:hover .elementor-icon-list-icon svg{color:#ed03
 /* Center the event/testimonial card images horizontally within their figure. */
 .jet-testimonials__figure{text-align:center;}
 .jet-testimonials__figure img{display:block;margin-left:auto;margin-right:auto;}
+
+
+/* Partnership (and reused elsewhere): the pink section-bar headings (.custom-head2)
+   have white text on the original. Restore it so titles are readable on pink. */
+.custom-head2 .elementor-heading-title{color:#fff !important;font-weight:600 !important;}
+
+
+/* Text-editor paragraphs use line-height 1.6 on the original (e.g. 27.2px at
+   17px). The per-page bake captured a too-small absolute value, so enforce the
+   original ratio for readable, correctly-spaced body text. */
+.elementor-widget-text-editor p, .elementor-text-editor p{line-height:1.6 !important;}
+
+/* Contact managers: keep social icon rows aligned across the desktop row even
+   when names/titles wrap to different line counts. */
+@media (min-width: 1025px) {
+  #our_contact .elementor-container {
+    align-items: stretch !important;
+  }
+
+  #our_contact .elementor-column > .elementor-widget-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    height: 100% !important;
+  }
+
+  #our_contact .elementor-widget-image,
+  #our_contact .elementor-widget-heading,
+  #our_contact .elementor-widget-text-editor,
+  #our_contact .elementor-widget-social-icons {
+    width: 100% !important;
+  }
+
+  #our_contact .elementor-widget-heading .elementor-heading-title {
+    min-height: 34px !important;
+  }
+
+  #our_contact .elementor-widget-text-editor {
+    min-height: 52px !important;
+  }
+
+  #our_contact .elementor-widget-social-icons {
+    margin-top: auto !important;
+  }
+}
+
+.inhouse_wrap [data-tooltip] {
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:14px !important;
+  height:14px !important;
+  min-width:14px !important;
+  padding:0 !important;
+  line-height:1 !important;
+  border-radius:50% !important;
+  vertical-align:top !important;
+}
+
+@media (max-width: 640px) {
+  .inhouse_wrap {
+    width: min(324px, calc(100vw - 66px)) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .inhouse_wrap p {
+    font-size: 8px !important;
+    line-height: 12.8px !important;
+  }
+
+  #post-1029 .page-title {
+    font-size: 24px !important;
+    line-height: 33.6px !important;
+  }
+}

@@ -1,0 +1,14 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/careers.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/2a69660f6faa2cc2734bbebade6a1859.css";
+---
+<Base title={"Careers - Affiliate Dragons"} description={"Careers 😈 Affiliate Dragons is a performance marketing agency with deep expertise in the industry!We care about our partners and help them reach new heights.👀 Main focus: Affiliate Dragons are exper"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/careers/">
+  <SiteHeader slot="header" lang="en" />
+  <link rel="stylesheet" href="/assets/modal.css" slot="header" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+  <script src="/assets/careers-modal.js" is:inline></script>
+</Base>

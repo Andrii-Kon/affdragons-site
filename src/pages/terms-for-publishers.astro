@@ -1,0 +1,13 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/terms-for-publishers.html?raw";
+import footerHtml from "../footer.html?raw";
+
+const cssBundle = "/wp-content/cache/min/1/87c82618bd2b6cb0233ebb3f3dd35911.css";
+---
+<Base title={"Terms for Publishers - Affiliate Dragons"} description={"Affiliate Program Operating Agreement for publishers participating in the Affiliate Dragons affiliate program."} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/terms-for-publishers/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

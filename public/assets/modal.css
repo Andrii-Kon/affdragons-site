@@ -1,0 +1,143 @@
+/* Clean, centered modal for the Careers "Respond" form (the original's popup
+   rendered misaligned; this is a tidy replacement with the same fields). */
+.ad-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 18px;
+  overflow-y: auto;
+}
+.ad-modal-overlay.is-open {
+  display: flex;
+}
+.ad-modal {
+  background: #fff;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 680px;
+  overflow: visible;
+  padding: 24px 28px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+.ad-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  line-height: 1;
+  color: #8a8a99;
+  cursor: pointer;
+}
+.ad-modal__close:hover {
+  color: #292b7a;
+}
+.ad-modal__form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 14px;
+  row-gap: 12px;
+}
+.ad-modal__field {
+  margin: 0;
+}
+.ad-modal__field:nth-child(n + 3),
+.ad-modal__send {
+  grid-column: 1 / -1;
+}
+.ad-modal__field label {
+  display: block;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.65);
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+.ad-modal__field input[type="text"],
+.ad-modal__field input[type="email"],
+.ad-modal__field select,
+.ad-modal__field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d5d8dc;
+  border-radius: 4px;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+  background: #fff;
+}
+.ad-modal__field input[type="text"],
+.ad-modal__field input[type="email"],
+.ad-modal__field select {
+  height: 40px;
+}
+.ad-modal__field textarea {
+  height: 94px;
+  min-height: 94px;
+  resize: none;
+}
+.ad-modal__field input[type="file"] {
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.72);
+}
+.ad-modal__field input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 9px 12px;
+  border: 1px solid #d5d8dc;
+  border-radius: 4px;
+  background: #f7f7fb;
+  color: #292b7a;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.ad-modal__send {
+  display: block;
+  width: 100%;
+  background: #292b7a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 13px 14px;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.ad-modal__send:hover {
+  background: #ec21ba;
+}
+
+@media (max-width: 640px) {
+  .ad-modal-overlay {
+    align-items: flex-start;
+    padding: 12px;
+  }
+  .ad-modal {
+    max-width: 100%;
+    padding: 22px 18px 18px;
+  }
+  .ad-modal__form {
+    grid-template-columns: 1fr;
+  }
+  .ad-modal__field,
+  .ad-modal__send {
+    grid-column: 1;
+  }
+}

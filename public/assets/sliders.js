@@ -133,6 +133,7 @@
       if (!dotsWrap) return;
       dotsWrap.innerHTML = "";
       dots.length = 0;
+      // One dot per scroll window (so 14 events at 3-per-view => 12 dots).
       for (let i = 0; i <= maxIndex(); i++) {
         const d = document.createElement("button");
         d.type = "button";

@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/inhouse-offers.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/47985227d0e56355a1605c7fea29f1a4.css";
+---
+<Base title={"InHouse offers - Affiliate Dragons"} description={"InHouse offers GEO Carrier Flow Payout Billable? Payout NonBillable? Content GR Vodafone, Cosmote, Wind Premium SMS $11 $3 Video, Download, Sweeps SA STC, Zain, Mobily, Virgin PIN submit $4 $1.9 Games"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/inhouse-offers/">
+  <SiteHeader slot="header" lang="en" active="inhouse-offers" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

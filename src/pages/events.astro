@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/events.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/731671187dc2a2697a70d91af7acb08e.css";
+---
+<Base title={"Events - Affiliate Dragons"} description={"Where to meet the Affiliate Dragons team? Our team actively attends conferences, exhibitions and meetups. Check out upcoming events Dragon team will be at and book a meeting: Affiliate World Asia 2025"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/events/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

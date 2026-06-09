@@ -3,8 +3,11 @@
 // Internal links are made root-relative so they resolve on the new static host;
 // the Login / "For Publishers" links intentionally keep pointing at the existing
 // my.affdragons.com app (the real auth backend) for switch-over.
-const { lang = "en" } = Astro.props;
+// `active` marks which nav item gets the pink underline (the current page).
+// Homepage passes "why-us"; other pages pass their own key or nothing.
+const { lang = "en", active = "" } = Astro.props;
 const base = lang === "en" ? "" : `/${lang}`;
+const cur = (key) => (active === key ? " current-menu-item" : "");
 ---
 <header id="masthead" class="site-header">
   <div class="affd-header" id="affd-header">
@@ -38,8 +41,8 @@ const base = lang === "en" ? "" : `/${lang}`;
       <div class="affd-header__panel" id="affd-header-panel">
         <nav class="affd-header__nav">
           <ul class="affd-header__menu">
-            <li class="menu-item current-menu-item"><a href={`${base}/#Why-Us`}>Why Us</a></li>
-            <li class="menu-item menu-item-has-children">
+            <li class={`menu-item${cur("why-us")}`}><a href={`${base}/#Why-Us`}>Why Us</a></li>
+            <li class={`menu-item menu-item-has-children${cur("cooperation")}`}>
               <a href={`${base}/partnership/`}>Cooperation</a>
               <ul class="sub-menu">
                 <li class="menu-item"><a href="https://my.affdragons.com/user/index?set-language=en#signup">For Publishers</a></li>
@@ -50,9 +53,9 @@ const base = lang === "en" ? "" : `/${lang}`;
                 <li class="menu-item"><a href={`${base}/events/`}>Events</a></li>
               </ul>
             </li>
-            <li class="menu-item"><a href={`${base}/inhouse-offers/`}>InHouse offers</a></li>
-            <li class="menu-item"><a href={`${base}/blog/`}>Blog</a></li>
-            <li class="menu-item"><a href={`${base}/contact/`}>Contact</a></li>
+            <li class={`menu-item${cur("inhouse-offers")}`}><a href={`${base}/inhouse-offers/`}>InHouse offers</a></li>
+            <li class={`menu-item${cur("blog")}`}><a href={`${base}/blog/`}>Blog</a></li>
+            <li class={`menu-item${cur("contact")}`}><a href={`${base}/contact/`}>Contact</a></li>
           </ul>
         </nav>
         <div class="affd-header__actions">
