@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/best-antivirus-software-for-2025-protect-your-devices-from-modern-threats.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"Best Antivirus Software for 2025: Protect Your Devices from Modern Threats - Affiliate Dragons"} description={"In 2025, our lives are more digital than ever – and so are the threats lurking online. Going without antivirus protection is like leaving your front door wide open. Cybercriminals are constantly seeki"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/best-antivirus-software-for-2025-protect-your-devices-from-modern-threats/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

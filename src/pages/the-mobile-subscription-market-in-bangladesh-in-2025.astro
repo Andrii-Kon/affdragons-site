@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/the-mobile-subscription-market-in-bangladesh-in-2025.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"The Mobile Subscription market in Bangladesh in 2025 - Affiliate Dragons"} description={"Bangladesh is a dynamically developing market for mobile services, boasting a massive subscriber base and growing internet penetration. As of early 2025, the country had around 185 million active mobi"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/the-mobile-subscription-market-in-bangladesh-in-2025/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

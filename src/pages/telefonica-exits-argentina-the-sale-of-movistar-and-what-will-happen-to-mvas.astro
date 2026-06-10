@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/telefonica-exits-argentina-the-sale-of-movistar-and-what-will-happen-to-mvas.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"Telefónica exits Argentina: the sale of Movistar and what will happen to MVAS - Affiliate Dragons"} description={"What happened? The Spanish telecom company Telefónica has fully sold its Argentine subsidiary Movistar Argentina to the local operator Telecom Argentina. The official sale agreement was announced on F"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/telefonica-exits-argentina-the-sale-of-movistar-and-what-will-happen-to-mvas/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

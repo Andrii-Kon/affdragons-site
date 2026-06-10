@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/📡-what-is-header-enrichment-and-why-is-it-essential-in-mvas.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"📡 What is Header Enrichment and Why is it Essential in mVAS? - Affiliate Dragons"} description={"In affiliate marketing and mVAS (Mobile Value Added Services), you have certainly heard the phrases \"is HE available?\" or \"detection is done via Header Enrichment.\" If you thought about headers in Exc"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/📡-what-is-header-enrichment-and-why-is-it-essential-in-mvas/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

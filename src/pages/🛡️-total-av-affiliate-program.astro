@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/🛡️-total-av-affiliate-program.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"🛡️ Total AV Affiliate Program - Affiliate Dragons"} description={"What is Total AV? 🖥️ Total AV is a modern antivirus software offering a wide range of features designed to protect your data, privacy, and devices. Its ease of use and high efficiency have made it a "} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/🛡️-total-av-affiliate-program/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

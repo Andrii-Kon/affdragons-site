@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/ai-coding-best-practices-2025-in-high-load-projects💻.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"AI coding best practices 2025 in high-load projects💻 - Affiliate Dragons"} description={"Today, many developers experiment with \"vibecoding\" — writing code not from scratch, but in collaboration with an AI that understands the task context and suggests ready-made code fragments. It sounds"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/ai-coding-best-practices-2025-in-high-load-projects💻/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

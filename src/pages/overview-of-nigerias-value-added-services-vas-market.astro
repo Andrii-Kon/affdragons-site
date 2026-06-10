@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/overview-of-nigerias-value-added-services-vas-market.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"Overview of Nigeria’s Value-Added Services (VAS) Market - Affiliate Dragons"} description={"Nigeria is often called the \"Giant of Africa\" – with over 218 million people and one of the continent’s largest telecom markets, it offers huge potential for mobile Value-Added Services (VAS). VAS ref"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/overview-of-nigerias-value-added-services-vas-market/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

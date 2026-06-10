@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/vas-in-the-united-states-what-changed-and-what-replaced-it.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"VAS in the United States: What Changed and What Replaced It - Affiliate Dragons"} description={"The End of the Era of Classic VAS Services in the United States Value-Added Services (VAS) are additional mobile services such as paid content subscriptions (ringtones, wallpapers, games, horoscopes, "} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/vas-in-the-united-states-what-changed-and-what-replaced-it/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

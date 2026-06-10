@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/the-most-common-google-bans-and-tips-to-avoid-it🔒🐉.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"The most common Google bans, and tips to avoid it!🔒🐉 - Affiliate Dragons"} description={"Hey Dragons! 🐲 Ready to conquer the affiliate marketing realm and avoid the fiery bans? We've got your back with a rundown of the most common bans and how to steer clear of them like a seasoned pro🔥"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/the-most-common-google-bans-and-tips-to-avoid-it🔒🐉/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

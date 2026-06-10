@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/globiancepay-client-review-166000-lost-case-documentation.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"GlobiancePay Client Review: How We Lost $166,000 — Full Case Documentation"} description={"Detailed chronology of Kadkon Limited vs GlobiancePay: $166,000 frozen since 2025, no response from support, DBS Bank account suspended, Singapore police report filed. Full evidence."} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/globiancepay-client-review-166000-lost-case-documentation/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

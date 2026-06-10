@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/artificial-intelligence-in-affiliate-marketing-midjourney-and-other-innovations-in-2023.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/c065a3156ea5cdcc5282237d9164e624.css";
+---
+<Base title={"ARTIFICIAL INTELLIGENCE IN AFFILIATE MARKETING: MIDJOURNEY AND OTHER INNOVATIONS IN 2023 - Affiliate Dragons"} description={"Is it really possible for a scenario where robots and advanced technology take over the world?Previously, this was just a fiction, but today it has become a reality.We live in an era where neural netw"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/artificial-intelligence-in-affiliate-marketing-midjourney-and-other-innovations-in-2023/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

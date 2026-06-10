@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/top-5-places-to-visit-in-budapest-during-awe-conference.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"TOP- 5 places to visit in Budapest during AWE conference - Affiliate Dragons"} description={"If you're heading to AWE Budapest, you're in for an unforgettable experience in one of Europe's most vibrant cities. While you're there, why not explore some of the city's must-see attractions between"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/top-5-places-to-visit-in-budapest-during-awe-conference/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

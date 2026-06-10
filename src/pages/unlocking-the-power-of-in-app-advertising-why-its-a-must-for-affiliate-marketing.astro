@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/unlocking-the-power-of-in-app-advertising-why-its-a-must-for-affiliate-marketing.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"Unlocking the power of In-App advertising: Why it’s a must for Affiliate Marketing - Affiliate Dragons"} description={"In today's mobile-first world, advertising strategies are evolving rapidly, and one of the hottest trends gaining momentum is in-app advertising. As users spend more time on their smartphones and tabl"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/unlocking-the-power-of-in-app-advertising-why-its-a-must-for-affiliate-marketing/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/ai-as-the-new-front-in-the-tech-regulation-war.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"AI as the New Front in the Tech Regulation War - Affiliate Dragons"} description={"Artificial intelligence is rapidly becoming the latest battleground between tech giants and regulators. In particular, AI-generated responses in search engines – such as Google’s new Search Generative"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/ai-as-the-new-front-in-the-tech-regulation-war/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

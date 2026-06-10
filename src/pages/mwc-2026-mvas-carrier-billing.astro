@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/mwc-2026-mvas-carrier-billing.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"MWC 2026: What Changed for mVAS and Carrier Billing - Affiliate Dragons"} description={"MWC 2026 reshaped the mVAS landscape with AI-powered DCB platforms, standardized CAMARA billing APIs, next-gen anti-fraud systems, and major content partnerships in MENA and Asia. Here’s what every af"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/mwc-2026-mvas-carrier-billing/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

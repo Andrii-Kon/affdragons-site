@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/dcb-and-vas-are-they-the-same-thing-key-differences-and-how-they-work-together.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"DCB and VAS — are they the same thing? Key differences and how they work together - Affiliate Dragons"} description={"Spoiler: no, they’re not the same 😉. If you’re new to mobile services or run a digital content platform, you might hear the terms VAS and DCB thrown around and wonder if they mean the same. They ofte"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/dcb-and-vas-are-they-the-same-thing-key-differences-and-how-they-work-together/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/africa-mvas-2026-kenya-egypt-nigeria.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"Africa mVAS 2026 Playbook: Kenya & Egypt Deep Dive (+ Nigeria Update) - Affiliate Dragons"} description={"Africa is one of the most underestimated regions in affiliate marketing. In 2026, regulation, operators, and user behavior across Kenya, Egypt, and Nigeria shifted — and so should your funnels. A prac"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/africa-mvas-2026-kenya-egypt-nigeria/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

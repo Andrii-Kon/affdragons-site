@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/2025-predictions-for-mvas-whatll-be-hot-what-to-ditch-and-how-to-rake-in-the-cash🤔.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"2025 Predictions for mVAS: What’ll Be Hot, What to Ditch, and How to Rake in the Cash🤔 - Affiliate Dragons"} description={"By 2025, mobile value-added services (mVAS) are gonna level up big time. Tech upgrades, new regs, and customers who won’t fall for old tricks anymore — that’s the new game. Wanna grab your slice of th"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/2025-predictions-for-mvas-whatll-be-hot-what-to-ditch-and-how-to-rake-in-the-cash🤔/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/top-landing-pages-for-different-types-of-traffic🔝.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"Top landing pages for different types of traffic🔝 - Affiliate Dragons"} description={"Hey, Dragons! 🐉 If you're diving into the world of the mVAS marketing, you know that the right landing page can make or break your campaign. But with so many types of traffic out there, how do you kn"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/top-landing-pages-for-different-types-of-traffic🔝/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

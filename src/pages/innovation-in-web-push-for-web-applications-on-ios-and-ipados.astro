@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/innovation-in-web-push-for-web-applications-on-ios-and-ipados.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/248cc5ab7aac05269e7906a357e1cd39.css";
+---
+<Base title={"Innovation in Web Push for web applications on iOS and iPadOS - Affiliate Dragons"} description={"Update of Web Push for web applications on iOS and iPadOS Web Push for web applications on iOS and iPadOS has released an important update for web application developers who want to send notifications"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/innovation-in-web-push-for-web-applications-on-ios-and-ipados/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

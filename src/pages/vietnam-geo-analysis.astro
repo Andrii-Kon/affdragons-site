@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/vietnam-geo-analysis.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"Vietnam GEO Analysis 2026: Mobile Affiliate Marketing Guide |Viettel, VinaPhone Strategies - Affiliate Dragons"} description={"1. Vietnam GEO Overview: Why Affiliates Should Care Vietnam is one of the strongest mobile-first GEOs in Southeast Asia and a long-term growth market for affiliate marketing. With a population of over"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/vietnam-geo-analysis/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

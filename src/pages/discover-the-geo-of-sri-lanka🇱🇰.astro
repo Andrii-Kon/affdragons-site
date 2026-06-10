@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/discover-the-geo-of-sri-lanka🇱🇰.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/f4e80f044ed4bbce560e27ab0089a182.css";
+---
+<Base title={"Discover the GEO of Sri Lanka🇱🇰 - Affiliate Dragons"} description={"Sri Lanka, a gem in the heart of the Indian Ocean, beckons affiliates with its vibrant market potential and burgeoning digital landscape. To unlock the full potential of this GEO, it's essential to gr"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/discover-the-geo-of-sri-lanka🇱🇰/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

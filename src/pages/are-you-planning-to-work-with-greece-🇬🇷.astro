@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/are-you-planning-to-work-with-greece-🇬🇷.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"Are you planning to work with Greece? 🇬🇷 - Affiliate Dragons"} description={"Dragons have in-house offers with a prefill checkbox ✅ and custom designs.Contact the Affiliate Dragons manager and get links 🔗. But first, let's study this geo 🧐. Population: 10.5 million 👥 Bigges"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/are-you-planning-to-work-with-greece-🇬🇷/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

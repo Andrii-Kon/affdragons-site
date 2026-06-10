@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/🚀-key-metrics-in-mvas-campaigns-epc-cr-and-roi.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"🚀 Key Metrics in mVAS Campaigns: EPC, CR and ROI - Affiliate Dragons"} description={"💡 A Beginner’s Guide for Those Starting in Mobile VAS Mobile VAS campaigns (Value Added Services — mobile subscriptions for content, games, utilities, and entertainment) are among the most profitable"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/🚀-key-metrics-in-mvas-campaigns-epc-cr-and-roi/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

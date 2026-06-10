@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/ru.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/65c64888fe0e0bd7574e543fef029850.css";
+---
+<Base title={"Affiliate Marketing Agency - Affiliate Dragons"} description={"ПАРТНЕРСКОЕ МАРКЕТИНГОВОЕ АГЕНСТВО ALL GEO CAMPAIGNS MOBILE APPS PROMOTION Зарегистрироваться Зарегистрироваться Мы заботимся о наших партнерах! Только рабочие оферы Только прямые офферы, заботливо от"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/ru/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/introduction-to-the-mvas-vertical.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"Introduction to THE mVAS vertical - Affiliate Dragons"} description={"The Mobile Value-Added Services (mVAS) vertical emerged and started gaining traction globally in the early 2000s, initially used for selling content like ringtones, games, and themes for mobile phones"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/introduction-to-the-mvas-vertical/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

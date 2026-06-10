@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/mvas-trends-2026.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"mVAS Trends 2026: Why Mobile Subscriptions Are the Hottest Vertical in Affiliate Marketing - Affiliate Dragons"} description={"The mVAS vertical is exploding in 2026. With a DCB market projected to reach $67 billion by 2032, AI-powered optimization, and untapped GEOs across Africa, Asia, and MENA — here's everything affiliate"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/mvas-trends-2026/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

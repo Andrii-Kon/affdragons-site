@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/how-to-dodge-facebook-ads-bans-like-a-pro😎.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/7f69c7c3bfccbc6a33717308ac252521.css";
+---
+<Base title={"How to dodge Facebook Ads bans like a pro?😎 - Affiliate Dragons"} description={"Hey there, Dragons! We all know Facebook is the place to be when it comes to reaching a massive audience. But getting your ads banned? Total buzzkill. Don’t worry, though—we’ve got the lowdown on how "} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/how-to-dodge-facebook-ads-bans-like-a-pro😎/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>

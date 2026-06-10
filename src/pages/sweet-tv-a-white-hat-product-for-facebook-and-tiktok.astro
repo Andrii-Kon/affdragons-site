@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import mainHtml from "../pages-content/sweet-tv-a-white-hat-product-for-facebook-and-tiktok.html?raw";
+import footerHtml from "../footer.html?raw";
+const cssBundle = "/wp-content/cache/min/1/552df2d3e46de153f189964de9261b6e.css";
+---
+<Base title={"SWEET.TV A White hat Streaming product for Facebook and TikTok - Affiliate Dragons"} description={"2023 is already upon us – a year bringing major changes not just globally, but for affiliate marketing specifically, too. Major media-buyers predict the following:In the coming year, most webmasters w"} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical="https://affdragons.com/sweet-tv-a-white-hat-product-for-facebook-and-tiktok/">
+  <SiteHeader slot="header" lang="en" />
+  <Fragment set:html={mainHtml} />
+  <Fragment slot="footer" set:html={footerHtml} />
+</Base>
