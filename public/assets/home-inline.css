@@ -311,3 +311,10 @@ footer .elementor-icon-list-item:hover .elementor-icon-list-icon svg{color:#ed03
     line-height: 33.6px !important;
   }
 }
+
+
+/* Comment-form attachments block (injected by the original's plugin via JS,
+   so it wasn't captured by the crawl — reproduced statically). */
+.comment-form-cc-attachment{font-size:14px;color:rgba(0,0,0,0.72);margin:10px 0 18px;}
+.comment-form-cc-attachment label{font-weight:500;margin-right:10px;}
+.comment-form-cc-attachment .cc-attachment-info{color:rgba(0,0,0,0.55);font-size:13px;}
