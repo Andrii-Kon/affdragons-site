@@ -149,6 +149,23 @@ img.lazyload,img.lazyloaded,img.entered,img[data-ll-status],img.attachment-large
 .elementor-widget-archive-posts .elementor-post__thumbnail img,
 .elementor-widget-posts .elementor-post__thumbnail img{display:block !important;}
 
+/* Keep the blog archive and recent-post widgets compact after static rendering. */
+.elementor-1851 .elementor-element.elementor-element-f607792{--grid-row-gap:24px;}
+@media (min-width:768px){
+  .elementor-1851 .elementor-element.elementor-element-f607792 .elementor-post__thumbnail__link{
+    height:200px !important;
+    align-self:flex-start !important;
+    overflow:hidden !important;
+  }
+  .elementor-1851 .elementor-element.elementor-element-552371e .elementor-post__thumbnail__link,
+  .elementor-1851 .elementor-element.elementor-element-552371e .elementor-post__thumbnail{
+    height:123px !important;
+    max-height:123px !important;
+    overflow:hidden !important;
+  }
+}
+.elementor-1851 .elementor-element.elementor-element-552371e{--grid-row-gap:24px;}
+
 
 /* Elementor entrance animations, reproduced statically.
    Elements start hidden (elementor-invisible); a small scroll-trigger
