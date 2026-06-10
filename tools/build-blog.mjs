@@ -50,7 +50,8 @@ for (let i = 0; i < posts.length; i++) {
   title = title.replace(/&amp;/g, "&").replace(/&#0?39;/g, "'").replace(/&quot;/g, '"').trim();
 
   try {
-    execFileSync("node", ["tools/build-page.mjs", slug, title], { stdio: "pipe", timeout: 120000 });
+    // "" active nav, "post" => minimal footer (posts have no big footer)
+    execFileSync("node", ["tools/build-page.mjs", slug, title, "", "post"], { stdio: "pipe", timeout: 120000 });
     ok++;
     built.push(slug);
     if (i % 10 === 0) console.log(`[${i + 1}/${posts.length}] ${slug}`);

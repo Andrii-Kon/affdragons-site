@@ -13,8 +13,9 @@ const ROOT = "https://affdragons.com";
 const slug = process.argv[2];
 const title = process.argv[3] || slug;
 const active = process.argv[4] || ""; // nav item to highlight (e.g. "cooperation")
+const isPost = process.argv[5] === "post"; // posts use the minimal footer
 if (!slug) {
-  console.error("usage: node tools/build-page.mjs <slug> <title> [activeNavKey]");
+  console.error("usage: node tools/build-page.mjs <slug> <title> [activeNavKey] [post]");
   process.exit(1);
 }
 const url = `${ROOT}/${slug}/`;
@@ -148,7 +149,7 @@ const astro = `---
 import Base from "../layouts/Base.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import mainHtml from "../pages-content/${slug}.html?raw";
-import footerHtml from "../footer.html?raw";
+import footerHtml from ${isPost ? '"../footer-post.html?raw"' : '"../footer.html?raw"'};
 const cssBundle = ${JSON.stringify(out.cssBundle || "/wp-content/cache/min/1/15b1474ef970b378f3d5f78749ff522e.css")};
 ---
 <Base title={${JSON.stringify(title)}} description={${JSON.stringify((out.description || "").slice(0, 200))}} cssBundle={cssBundle} inlineCss="/assets/home-inline.css" lang="en" canonical=${JSON.stringify(url)}>
