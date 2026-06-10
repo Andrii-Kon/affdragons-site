@@ -143,6 +143,12 @@
 img.lazyload,img.lazyloaded,img.entered,img[data-ll-status],img.attachment-large{display:inline-block !important;}
 .elementor-widget-container img{display:inline-block !important;}
 
+/* Blog/archive post thumbnails are block-level on the original. The broad
+   lazy-image visibility fix above made them inline-block, which adds a small
+   baseline gap under each thumbnail and makes every post row taller. */
+.elementor-widget-archive-posts .elementor-post__thumbnail img,
+.elementor-widget-posts .elementor-post__thumbnail img{display:block !important;}
+
 
 /* Elementor entrance animations, reproduced statically.
    Elements start hidden (elementor-invisible); a small scroll-trigger
